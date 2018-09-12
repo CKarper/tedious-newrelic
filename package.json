@@ -1,0 +1,19 @@
+{
+  "name": "tedious-newrelic",
+  "version": "0.1.0",
+  "description": "Instrumentation for tedious node lib",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Christopher Karper",
+  "license": "MIT",
+  "devDependencies": {
+    "newrelic": "^4.8.1",
+    "tedious": "^2.6.4"
+  },
+  "peerDependencies": {
+    "newrelic": "^4.8.1",
+    "tedious": "^2.6.4"
+  }
+}
