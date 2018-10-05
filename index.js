@@ -19,7 +19,7 @@ function instrumentTedious(shim, tedious, moduleName) {
 
 function tediousRequestQuery(shim, func, name, args) {
 	const request = args[0];
-	if (request.parametersByName.statement) {
+	if (request.parametersByName && request.parametersByName.statement) {
 		return request.parametersByName.statement.value;
 	}
 	return request.sqlTextOrProcedure;
