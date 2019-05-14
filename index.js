@@ -7,13 +7,14 @@ function instrumentTedious(shim, tedious, moduleName) {
 
 	const proto = tedious && tedious.Connection && tedious.Connection.prototype;
 	if (proto) {
-		shim.recordQuery(
-			proto,
-			'makeRequest',
-			{ query: tediousRequestQuery, callback: tediousRequestCallback }
-		);
+		shim.recordQuery(proto, 'makeRequest', {
+			query: tediousRequestQuery,
+			callback: tediousRequestCallback
+		});
 
-		shim.recordOperation(proto, ['beginTransaction', 'commitTransaction'], { callback: shim.FIRST });
+		shim.recordOperation(proto, ['beginTransaction', 'commitTransaction'], {
+			callback: shim.FIRST
+		});
 	}
 }
 
