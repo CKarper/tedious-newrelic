@@ -1,21 +1,21 @@
 {
   "name": "tedious-newrelic",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "Instrumentation for tedious node lib",
   "main": "index.js",
   "engines": {
-    "node": ">=4.0.0 <11.0.0",
+    "node": ">=6.0.0 <=12.0.0",
     "npm": ">=2.0.0"
   },
   "devDependencies": {
     "eslint": "^5.16.0",
-    "eslint-config-airbnb": "^17.1.0",
-    "eslint-config-prettier": "^4.2.0",
-    "eslint-plugin-import": "^2.17.2",
-    "eslint-plugin-jsx-a11y": "^6.2.1",
-    "eslint-plugin-react": "^7.13.0",
+    "eslint-config-airbnb": "^17.1.1",
+    "eslint-config-prettier": "^4.3.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.3",
     "newrelic": "^5.8.0",
-    "prettier": "^1.17.1",
+    "prettier": "^1.18.2",
     "tedious": "^6.1.1"
   },
   "peerDependencies": {
@@ -31,5 +31,15 @@
   "homepage": "https://github.com/ckarper/tedious-newrelic",
   "bugs": {
     "url": "https://github.com/ckarper/tedious-newrelic/issues"
-  }
+  },
+  "keywords": [
+    "newrelic",
+    "new relic",
+    "tedious",
+    "mssql",
+    "sql",
+    "database",
+    "datastore",
+    "instrumentation"
+  ]
 }
