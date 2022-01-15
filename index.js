@@ -25,7 +25,13 @@ function instrumentTedious(shim, tedious, _moduleName) {
 			callback: tediousRequestCallback
 		});
 
-		shim.recordOperation(proto, ['beginTransaction', 'commitTransaction'], {
+		shim.recordOperation(proto, [
+			'beginTransaction',
+			'commitTransaction',
+			'rollbackTransaction',
+			'saveTransaction',
+			'transaction',
+		], {
 			callback: shim.FIRST
 		});
 	}
