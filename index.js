@@ -12,7 +12,7 @@ function tediousRequestQuery(shim, func, name, args) {
 
 function tediousRequestCallback(shim, opFunc, opName, segment, args) {
 	const request = args[0];
-	request.callback = shim.bindSegment(request.callback, segment);
+	request.callback = shim.bindSegment(request.callback, segment, true);
 }
 
 function instrumentTedious(shim, tedious, _moduleName) {
