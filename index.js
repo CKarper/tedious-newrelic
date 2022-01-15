@@ -30,7 +30,6 @@ function instrumentTedious(shim, tedious, _moduleName) {
 			'commitTransaction',
 			'rollbackTransaction',
 			'saveTransaction',
-			'transaction',
 		], {
 			callback: shim.FIRST
 		});
