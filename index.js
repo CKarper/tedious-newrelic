@@ -12,7 +12,7 @@ function tediousRequestQuery(shim, func, name, args) {
 
 function tediousRequestCallback(shim, opFunc, opName, segment, args) {
 	const request = args[0];
-	request.callback = shim.bindSegment(request.callback, segment);
+	request.callback = shim.bindSegment(request.callback, segment, true);
 }
 
 function instrumentTedious(shim, tedious, _moduleName) {
@@ -25,7 +25,12 @@ function instrumentTedious(shim, tedious, _moduleName) {
 			callback: tediousRequestCallback
 		});
 
-		shim.recordOperation(proto, ['beginTransaction', 'commitTransaction'], {
+		shim.recordOperation(proto, [
+			'beginTransaction',
+			'commitTransaction',
+			'rollbackTransaction',
+			'saveTransaction',
+		], {
 			callback: shim.FIRST
 		});
 	}
